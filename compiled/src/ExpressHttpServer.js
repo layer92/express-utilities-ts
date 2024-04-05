@@ -7,7 +7,7 @@ exports.ExpressHttpServer = void 0;
 const fs_1 = __importDefault(require("fs"));
 const http_1 = __importDefault(require("http"));
 const https_1 = __importDefault(require("https"));
-const away_core_1 = require("away-core");
+const core_1 = require("@layer92/core");
 class ExpressHttpServer {
     constructor(_app, _config) {
         this._app = _app;
@@ -16,8 +16,8 @@ class ExpressHttpServer {
     async startAsync() {
         const { port, protocol, sslCertPath, sslPrivateKeyPath, verbose } = this._config;
         if (protocol === "https") {
-            (0, away_core_1.Expect)(sslPrivateKeyPath, `missing sslPrivateKeyPath`);
-            (0, away_core_1.Expect)(sslCertPath, `missing sslCertPath`);
+            (0, core_1.Expect)(sslPrivateKeyPath, `missing sslPrivateKeyPath`);
+            (0, core_1.Expect)(sslCertPath, `missing sslCertPath`);
             this._server = https_1.default.createServer({
                 key: fs_1.default.readFileSync(sslPrivateKeyPath),
                 cert: fs_1.default.readFileSync(sslCertPath),

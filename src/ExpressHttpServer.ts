@@ -2,7 +2,7 @@ import fs from "fs";
 import { Application } from "express";
 import http from "http";
 import https from "https";
-import {Expect} from "away-core";
+import { Expect } from "@layer92/core";
 
 export interface ExpressHttpServerConfig{
     port:number,

@@ -6,7 +6,7 @@ exports.ExpressEndpointNotFoundMiddleware = void 0;
 */
 function ExpressEndpointNotFoundMiddleware(request, response, next) {
     return response.status(404).json({
-        message: "Not found."
+        message: "API endpoint not found."
     });
 }
 exports.ExpressEndpointNotFoundMiddleware = ExpressEndpointNotFoundMiddleware;

@@ -51,3 +51,8 @@ export class ExpressHttpServer{
         this._server?.close();
     }
 }
+
+/** returns when the server has started listening */
+function serverListenAsync(){
+
+}

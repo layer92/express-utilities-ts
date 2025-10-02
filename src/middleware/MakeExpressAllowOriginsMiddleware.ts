@@ -1,5 +1,6 @@
 import { NextFunction, Request, Response } from "express";
 
+//TODO: add more wildcard support for subdomains, etc
 export function MakeExpressAllowOriginsMiddleware(origins:"*"|string[]) {
     return (
         request:Request, response:Response, next:NextFunction

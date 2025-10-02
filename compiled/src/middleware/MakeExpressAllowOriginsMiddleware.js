@@ -1,6 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.MakeExpressAllowOriginsMiddleware = void 0;
+//TODO: add more wildcard support for subdomains, etc
 function MakeExpressAllowOriginsMiddleware(origins) {
     return (request, response, next) => {
         if (origins === "*") {
